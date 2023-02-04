@@ -1,0 +1,15 @@
+server:
+  port: 18080
+spring:
+  application:
+    name: provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: cbbbc64b-562b-4aee-aa1f-e48fe0e70817
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: cbbbc64b-562b-4aee-aa1f-e48fe0e70817
+        group: DEFAULT_GROUP
+        file-extension: yml

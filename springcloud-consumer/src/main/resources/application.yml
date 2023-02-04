@@ -1,8 +1,15 @@
-server:
-  port: 18081
 spring:
-  cloud:
-    nacos:
-      server-addr: 127.0.0.1:8848
-  application:
-    name: consumer
+  profiles:
+    active: dev
+feign:
+  client:
+    config:
+      # 全局级别配置
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        # 只打印基本信息，包括请求方法、请求地址、响应状态码、请求时长
+        loggerLevel: basic
+  circuitbreaker:
+    enabled: true
+
